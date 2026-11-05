@@ -1,5 +1,7 @@
 # Verification record
 
+This initial QA record was prepared before public release. Following owner approval, the repository was made public and GitHub Pages was configured from `main` / `(root)`. GitHub’s deployment history is the source for live deployment status; no paid hosting upgrade or custom workflow was added.
+
 Verified 2026-11-05 against the final source with Node.js 24.22.1 and the available Chromium browser.
 
 ## Automated checks
@@ -38,5 +40,5 @@ Verified 2026-11-05 against the final source with Node.js 24.22.1 and the availa
 - Linked project descriptions were verified against public source documentation. Those security tools themselves were not executed or audited as part of the portfolio build.
 - HTB/THM standings and current certifications are owner-supplied, not independently verified or live-updated. The page includes that qualification.
 - Back to School CTF lacks a verified public source and was omitted pending an approved link/description.
-- No GitHub Actions workflow was installed; no hosted CI or paid build was triggered.
-- No public deployment, domain purchase, or DNS change was performed.
+- No custom GitHub Actions workflow was installed. The public release uses GitHub’s native Pages build/deployment workflow; no paid build service was added.
+- No domain purchase or DNS change was performed. The authorized public release uses GitHub’s default Pages domain.
