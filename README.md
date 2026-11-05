@@ -2,7 +2,7 @@
 
 A personal cybersecurity portfolio with an editorial, terminal-inspired visual identity: near-black backgrounds, acid-green accents, original wireframe graphics, project filters, and a keyboard-accessible navigation terminal.
 
-**Status:** private development repository. No public deployment, domain purchase, analytics, contact form, GitHub Actions workflow, or paid build service is configured. The potential `kaotickjay.com` domain is not assumed to be owned and is not set as a canonical URL.
+**Hosting:** built for GitHub Pages from `main` / `(root)`. The root `.nojekyll` file serves the static source without Jekyll processing. No custom Actions workflow, paid build service, analytics, contact form, or domain purchase is required. The potential `kaotickjay.com` domain is not assumed to be owned and is not set as a canonical URL.
 
 ## Run locally
 
@@ -25,7 +25,7 @@ Visit `http://localhost:8000`. The site is static HTML, CSS, and JavaScript modu
 - `core.js`: pure command/filter helpers with an explicit allowlist.
 - `assets/favicon.svg`: original KJ monogram.
 - `scripts/check.mjs`: static content, privacy, link-target, and structural checks.
-- `scripts/build.mjs`: copies the five public files into `dist/`.
+- `scripts/build.mjs`: copies the static delivery files into `dist/`.
 - `tests/core.test.mjs`: automated unit tests, using the built-in Node test runner.
 - `docs/content-sources.md`: claim provenance and editorial boundaries.
 - `docs/qa.md`: actual verification performed and remaining limits.
@@ -44,13 +44,13 @@ Edit the HTML, update `docs/content-sources.md` when changing claims, then run a
 
 HTB and THM top 1% standings and active certifications are owner-supplied, not live integrations or independently verified badges. The site says so. Do not add exact ranks, credential numbers, endorsement badges, client logos, unverified vulnerability claims, or invented metrics. Contact currently uses public GitHub/HTB/THM links; private email and phone data are intentionally absent.
 
-## Before any public release
+## Publication and maintenance
 
 1. Have Johnny review the wording, current role, certifications, and profile standings.
 2. Confirm all profile links are current and choose any additional public contact method deliberately.
-3. Decide hosting and cost limits. No deployment workflow is included.
+3. GitHub Pages can serve `main` / `(root)` directly. No custom deployment workflow is included; GitHub manages its native Pages deployment.
 4. Confirm domain ownership before adding a canonical URL, social-image URL, or DNS settings.
-5. Remove the `noindex, nofollow` robots meta tag only when public indexing is wanted. It is an indexing preference, **not access control**.
+5. The development-only `noindex, nofollow` meta tag was removed for the authorized public release. Robots tags are indexing preferences, **not access control**.
 6. Re-run tests and browser checks against the actual production host, including mobile and assistive-technology checks.
 
 ## Security and privacy

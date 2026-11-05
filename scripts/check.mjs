@@ -23,7 +23,7 @@ assert(html.includes('class="skip-link"'), 'Missing skip link');
 assert(html.includes('https://tryhackme.com/p/KaotickJay'), 'Missing current THM URL');
 assert(!html.includes('https://tryhackme.com/p/kaotickj'), 'Stale THM URL');
 assert(html.includes('https://app.hackthebox.com/profile/476578'), 'Missing HTB URL');
-assert(!/(mailto:|tel:|kaotickj@gmail\.com)/i.test(html), 'Private contact details must not be included');
+assert(!/(mailto:|tel:|[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,})/i.test(html), 'Email addresses and private contact details must not be included');
 assert(!/https?:\/\/(?:www\.)?kaotickjay\.com/.test(html), 'Unverified domain must not be claimed');
 assert((html.match(/data-category=/g)??[]).length===6, 'Expected six verified projects');
 assert(!/\b(?:eval\(|new Function\(|innerHTML\s*=)/.test(await readFile(resolve(project,'app.js'),'utf8')), 'Unsafe dynamic HTML or execution');
